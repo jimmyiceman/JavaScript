@@ -4,11 +4,57 @@
 
 <h1>My First JavaScript</h1>
 
+
+
+<!-- Buttons Start from here -->
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
 Click me to display Date and Time.</button>
 
-<p id="demo"></p>
+<br></br>
 
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+Click Me to say "Hello JavaScript"!</button>
+
+<br></br>
+
+<button type="button" onclick="myFunction()">Click Me to Change color of the text below!</button>
+<!-- Buttons ends here -->
+
+<p id="demo">Demo Text</p>
+
+<p>Please input a number between 1 and 10:</p>
+<input id="numb"></input>
+<button type="button" onclick="numValidFunction()">Submit</button>
+
+
+<!-- Javascript script starts here -->
+<script>
+	function myFunction(){
+		var x = document.getElementById("demo")
+		x.style.fontSize = "25px";
+		x.style.color = "red";
+	}
+
+</script>
+<script type="text/javascript">
+	function numValidFunction(){
+		var x, text;
+
+		// get the value of the input field with id="numb"
+		x = document.getElementById("numb").value;
+
+		// if x is not a number or less than one or greater than 10
+		if(isNaN(x) || x <1 || x > 10){
+			text = "input not valid";
+		}else{
+			text = "Input is valid";
+		}
+		document.getElementById("demo").innerHTML = text
+	}
+
+</script>
+<!-- Javascript code ends here -->
 </body>
 </html> 
