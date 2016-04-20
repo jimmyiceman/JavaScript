@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript outputs</title>
+</head>
+
+<body>
+<input id="select"></input>
+
+<button onclick="outputFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+	function outputFunction(){
+		var x = document.getElementById("select").value
+		if (x == "alert") {
+			window.alert(x);
+		}else if (x == "write") {
+			document.write(x);
+		}else if (x == "inner") {
+			document.getElementById("demo").innerHTML = x;
+		}else{
+			console.log(x);
+		}
+	}
+</script>
+
+</body>
+</html>
